@@ -1,4 +1,4 @@
-                                                                                    JAVA BASIC      
+Author:M Raju                                                                                    JAVA BASIC      
 
 
     ANS:Core Java refers to the fundamental components of the Java programming language that are essential for building Java applications. 
