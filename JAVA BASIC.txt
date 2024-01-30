@@ -1,0 +1,263 @@
+                                                                                    JAVA BASIC      
+
+
+    ANS:Core Java refers to the fundamental components of the Java programming language that are essential for building Java applications. 
+         Here are some basic concepts and features of Core Java:
+
+    1.Java Virtual Machine (JVM): Java programs are executed on a virtual machine known as the JVM. It abstracts the hardware and operating system, providing platform independence.
+
+    2.Variables and Data Types: Java is a strongly-typed language, and variables must be declared before use. It supports various data types such as int, float, double, char, boolean, etc.
+
+    3.Operators: Java supports a wide range of operators, including arithmetic, relational, logical, bitwise, and assignment operators.
+
+    4.Control Flow Statements:
+
+      if-else: Conditional statements based on a boolean expression.
+      switch: A multi-branching statement based on the value of an expression.
+
+    5.Loops:
+       for: Used for repetitive execution with a specified number of iterations.
+       do-while: Similar to the while loop, but the condition is evaluated after the execution of the loop.
+    6.Arrays: Java supports arrays, which are collections of elements of the same type. Arrays can be one-dimensional or multi-dimensional.
+
+    7.Functions (Methods): Java uses methods for code organization and reusability. Every Java application must have a main method as the entry point.
+
+    8.Object-Oriented Programming (OOP):
+
+      Classes and Objects: Java is an object-oriented language, and everything in Java is associated with classes and objects.
+      Encapsulation: Bundling of data (attributes) and methods that operate on the data within a single unit (class).
+      Inheritance: Allows a class (subclass/child) to inherit properties and behavior from another class (superclass/parent).
+      Polymorphism: The ability of a class to take on multiple forms. It can be achieved through method overloading and overriding.
+
+   9.Exception Handling: Java uses try, catch, and finally blocks for handling exceptions. This helps in writing robust and fault-tolerant code.
+
+   10.Packages: Java classes are organized into packages for better code management and modularity.
+
+   11.Java API (Application Programming Interface): Java provides a rich set of libraries and APIs for performing various tasks, including I/O operations, networking, data structures, and more.
+
+   12.Input/Output (I/O): Java provides classes for handling input and output operations, including reading/writing to files and interacting with the console.
+
+     These are some of the foundational concepts in Core Java. Understanding these basics is crucial for anyone starting to learn Java programming. As you progress, you can delve into more advanced topics such as multithreading, networking, and graphical user interface (GUI) development.
+
+                                                            
+
+                                                    What is interface?
+
+     1. Declaration:
+
+You declare an interface using the interface keyword.
+Interface methods are implicitly public and abstract. You don't need to use the public and abstract modifiers when declaring methods in an interface.
+Interface fields (constants) are implicitly public, static, and final.
+
+     2. Implementing Interfaces:
+
+To use an interface, a class must implement it using the implements keyword.
+The class that implements an interface must provide concrete (non-abstract) implementations for all the abstract methods declared in the interface.
+
+     3. Extending Interfaces:
+
+An interface can extend another interface using the extends keyword. The subclass interface inherits the abstract methods of the parent interface.
+
+    4. Default and Static Methods (Java 8 and later):
+
+Starting from Java 8, interfaces can have default and static methods with implementations.
+Default methods are used to provide a default implementation for a method. Classes that implement the interface can choose to override the default method.
+Static methods in interfaces are similar to static methods in classes.
+
+
+    5. Multiple Inheritance:
+
+Since a class can implement multiple interfaces, Java interfaces provide a way to achieve multiple inheritance.
+
+
+ <Interfaces are widely used in Java for achieving abstraction, defining contracts, and supporting multiple inheritance. They play a crucial role in designing flexible and modular code.>
+
+
+      @ Dynamic binding, also known as late binding or runtime polymorphism, is a concept in Java (and other object-oriented programming languages) where the actual method to be invoked is determined at runtime rather than at compile time. This is achieved through the use of method overriding and the superclass-subclass relationship.
+
+Here's an explanation of dynamic binding in Java:
+
+       1.Method Overriding:
+
+In dynamic binding, the overridden method in the subclass provides a specific implementation of a method that is already defined in its superclass.
+The method signature in the subclass must be identical to the method signature in the superclass.
+The @Override annotation is commonly used to explicitly indicate that a method is intended to override a method in the superclass.
+
+       2.Polymorphism:
+
+Objects of the subclass can be treated as objects of the superclass, allowing for more flexibility and extensibility in the code.
+The actual method to be invoked is determined at runtime based on the type of the actual object rather than the reference type.
+
+       3.Dynamic Binding:
+
+During runtime, the Java Virtual Machine (JVM) determines the actual type of the object and binds the method call to the appropriate method implementation in the class hierarchy.
+This allows for the flexibility of invoking the correct method based on the actual type of the object, even if the reference type is a superclass.
+
+
+   <In the example above, even though the reference type is Animal, the actual type of the object is Dog.
+    During runtime, the JVM dynamically binds the makeSound method to the implementation in the Dog class.
+    Dynamic binding is a key feature of object-oriented programming languages, promoting code reusability, extensibility, and flexibility in the design of software systems.>
+
+
+
+                                                   Method in java?
+
+ In Java, a method is a collection of statements that perform a specific task. Methods are used to organize code into logical units, promote code reuse, and make the code more modular. Here are the key components and concepts related to methods in Java:
+
+      @1.Method Declaration:
+The syntax for declaring a method in Java is as follows:
+
+java
+Copy code
+returnType methodName(parameter1Type parameter1Name, parameter2Type parameter2Name, ...) {
+    // method body
+    // statements
+    return returnValue; // optional
+}
+returnType: The data type of the value that the method returns. Use void if the method does not return any value.
+methodName: The name of the method.
+parameters: Input values that the method takes. These are optional, and a method can have zero or more parameters.
+method body: The block of statements that define the behavior of the method.
+return statement: If the method has a return type other than void, it must return a value of that type using the return keyword.
+Example:
+java
+Copy code
+public class MyClass {
+    // Method without parameters and return value
+    public void printHello() {
+        System.out.println("Hello, World!");
+    }
+
+    // Method with parameters and a return value
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+
+      @2.Calling a Method:
+You can call a method by using the following syntax:
+
+java
+Copy code
+// Creating an object of the class
+MyClass myObject = new MyClass();
+
+// Calling methods
+myObject.printHello(); // Method without parameters and return value
+int sum = myObject.add(3, 5); // Method with parameters and a return value
+
+         @3.Method Overloading:
+Java supports method overloading, which allows you to define multiple methods with the same name but different parameter lists. Overloaded methods must have a different number or types of parameters.
+
+java
+Copy code
+public class Calculator {
+    // Method overloading
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b) {
+        return a + b;
+    }
+}
+      @4.Static Methods:
+Static methods belong to the class rather than an instance of the class. You can call static methods using the class name.
+
+java
+Copy code
+public class MathOperations {
+    // Static method
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
+// Calling a static method
+int result = MathOperations.multiply(2, 3);
+These are the fundamental concepts related to methods in Java. Methods play a crucial role in structuring code and making it more readable, maintainable, and reusable.
+
+
+
+
+                                      Collections in java?
+
+
+In Java, the Collections Framework provides a set of interfaces and classes to represent and manipulate groups of objects. Collections are used to store, retrieve, and manipulate data in various ways. The key interfaces in the Java Collections Framework are:
+
+     1. List Interface:
+
+Ordered collection (maintains the order of elements).
+Allows duplicate elements.
+Examples: ArrayList, LinkedList, Vector.
+java
+Copy code
+List<String> myList = new ArrayList<>();
+myList.add("Item 1");
+myList.add("Item 2");
+
+     2.Set Interface:
+
+Unordered collection (does not maintain the order of elements).
+Does not allow duplicate elements.
+Examples: HashSet, LinkedHashSet, TreeSet.
+java
+Copy code
+Set<Integer> mySet = new HashSet<>();
+mySet.add(1);
+mySet.add(2);
+       3.Map Interface:
+
+Represents a collection of key-value pairs.
+Each key must be unique.
+Examples: HashMap, LinkedHashMap, TreeMap.
+java
+Copy code
+Map<String, Integer> myMap = new HashMap<>();
+myMap.put("One", 1);
+myMap.put("Two", 2);
+      4.Queue Interface:
+
+Represents a collection designed for holding elements prior to processing.
+Follows the First-In-First-Out (FIFO) order.
+Examples: LinkedList, PriorityQueue.
+java
+Copy code
+Queue<String> myQueue = new LinkedList<>();
+myQueue.add("First");
+myQueue.add("Second");
+     5.Deque Interface:
+
+Represents a double-ended queue.
+Allows insertion and removal of elements from both ends.
+Examples: LinkedList, ArrayDeque.
+java
+Copy code
+Deque<String> myDeque = new LinkedList<>();
+myDeque.addFirst("First");
+myDeque.addLast("Last");
+       6. Collections Class:
+
+Provides utility methods for common operations on collections.
+Methods include sorting, searching, and synchronization.
+java
+Copy code
+List<Integer> numbers = Arrays.asList(3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5);
+Collections.sort(numbers);  // Sort the list
+These interfaces and classes are part of the Java Collections Framework, which provides a unified and standardized way to work with collections of objects. The framework simplifies the process of storing, retrieving, and manipulating data in a consistent manner across different collection types.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                             
